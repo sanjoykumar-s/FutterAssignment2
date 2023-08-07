@@ -14,10 +14,11 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Namer App',
+        title: 'Calculator App',
         theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+          // useMaterial3: true,
+          // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+          primarySwatch: Colors.red,
         ),
         home: MyHomePage(),
       ),
@@ -35,11 +36,29 @@ class MyHomePage extends StatelessWidget {
     var appState = context.watch<MyAppState>();
 
     return Scaffold(
-      body: Column(
-        children: [
-          Text('A random idea:'),
-          Text(appState.current.asLowerCase),
-        ],
+      appBar: new AppBar(
+        title: new Text("Calculator"),
+      ),
+      body: new Container(
+        padding: const EdgeInsets.all(20.0),
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new TextField(
+              keyboardType: TextInputType.number,
+              decoration: new InputDecoration(hintText: "Enter your number"),
+            ),
+            new Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+            ),
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

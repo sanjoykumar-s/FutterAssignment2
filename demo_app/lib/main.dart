@@ -37,6 +37,7 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: new AppBar(
+        centerTitle: true,
         title: new Text("Calculator"),
       ),
       body: new Container(
@@ -64,8 +65,15 @@ class MyHomePage extends StatelessWidget {
                   onPressed: () {
                     print('button pressed!');
                   },
-                  child: Text("-"),
+                  child: Text(
+                    "-",
+                  ),
                 ),
+              ],
+            ),
+            new Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 ElevatedButton(
                   onPressed: () {
                     print('button pressed!');

@@ -53,8 +53,31 @@ class MyHomePage extends StatelessWidget {
             ),
             new Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                ElevatedButton
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    print('button pressed!');
+                  },
+                  child: Text("+"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('button pressed!');
+                  },
+                  child: Text("-"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('button pressed!');
+                  },
+                  child: Text("*"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('button pressed!');
+                  },
+                  child: Text("="),
+                ),
               ],
             )
           ],
